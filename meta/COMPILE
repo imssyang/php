@@ -1,29 +1,39 @@
 
+apt install libmpc-dev  # --with-gmp
+apt install libzip-dev  # --with-zip
+
 ./configure --prefix=/opt/php \
---sysconfdir=/opt/php/conf \
---with-apxs2=/opt/httpd/bin/apxs \
---with-openssl \
---with-zlib \
---with-bz2 \
---with-curl \
---with-mysqli=/opt/mysql/bin/mysql_config \
---with-pdo-pgsql=/opt/postgresql \
---with-pear \
---with-readline=/opt/readline \
---with-fpm-user=www-data \
---with-fpm-group=www-data \
---with-valgrind \
---enable-bcmath \
---enable-fpm \
---enable-ftp \
---enable-mbstring \
---enable-pcntl \
---enable-phpdbg \
---enable-shmop \
---enable-sockets \
---enable-sysvmsg \
---enable-sysvsem \
---enable-sysvshm \
-VALGRIND_CFLAGS="-I/opt/valgrind/include" \
-VALGRIND_LIBS="-L/opt/valgrind/lib/valgrind"
+    --sbindir=/opt/php/bin \
+    --sysconfdir=/opt/php/conf \
+    --datarootdir=/opt/php/share \
+    --with-apxs2=/opt/httpd/bin/apxs \
+    --with-gettext \
+    --with-gmp \
+    --with-openssl \
+    --with-zlib \
+    --with-bz2 \
+    --with-curl \
+    --with-ldap=/opt/openldap \
+    --with-mysqli=/opt/mysql/bin/mysql_config \
+    --with-pdo-pgsql=/opt/postgresql \
+    --with-pear \
+    --with-readline=/opt/readline \
+    --with-fpm-user=www-data \
+    --with-fpm-group=www-data \
+    --with-valgrind \
+    --with-zip \
+    --enable-bcmath \
+    --enable-fpm \
+    --enable-ftp \
+    --enable-gd \
+    --enable-mbstring \
+    --enable-pcntl \
+    --enable-phpdbg \
+    --enable-shmop \
+    --enable-sockets \
+    --enable-sysvmsg \
+    --enable-sysvsem \
+    --enable-sysvshm \
+    VALGRIND_CFLAGS="-I/opt/valgrind/include" \
+    VALGRIND_LIBS="-L/opt/valgrind/lib/valgrind"
 
