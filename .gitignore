@@ -3,6 +3,7 @@ archive
 bin
 include
 lib
+log
 php
 sbin
 var

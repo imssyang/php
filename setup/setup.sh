@@ -33,6 +33,16 @@ init() {
     chmod 755 $HOME/var/run
   fi
 
+  if [[ ! -d $HOME/pools ]]; then
+    mkdir -p $HOME/pools
+    chmod 755 $HOME/pools
+  fi
+
+  if [[ ! -d $HOME/pools/www ]]; then
+    mkdir -p $HOME/pools/www
+    chmod 755 $HOME/pools/www
+  fi
+
   chown -R $GROUP:$USER $HOME
 
   if [[ ! -s $SYSD/$SERFILE ]]; then
