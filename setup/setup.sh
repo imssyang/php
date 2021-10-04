@@ -63,6 +63,14 @@ deinit() {
 
   systemctl daemon-reload
 
+  if [[ -d $HOME/log ]]; then
+    rm -rf $HOME/log
+  fi
+
+  if [[ -d $HOME/var ]]; then
+    rm -rf $HOME/var
+  fi
+
   egrep "^$USER" /etc/passwd >/dev/null
   if [[ $? -eq 0 ]]; then
     userdel $USER
