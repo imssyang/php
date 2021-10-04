@@ -1,5 +1,6 @@
 # Ignore by opt
 archive
+log
 pools
 var
 
