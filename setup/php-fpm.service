@@ -8,7 +8,7 @@ After=nginx.service
 Type=forking
 PIDFile=/opt/php/var/run/php-fpm.pid
 ExecStartPre=/bin/mkdir --parents /opt/php/var/run
-ExecStart=/opt/php/sbin/php-fpm --fpm-config /opt/php/conf/php-fpm.conf
+ExecStart=/opt/php/bin/php-fpm --fpm-config /opt/php/conf/php-fpm.conf
 ExecReload=/bin/kill -USR2 $MAINPID
 
 [Install]
